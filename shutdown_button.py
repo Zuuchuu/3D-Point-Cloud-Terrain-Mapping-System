@@ -24,12 +24,12 @@ def button_callback(channel):
         time.sleep(30)  # Wait for 30 seconds
         stop_rosbag()   # Stop ROS bag recording
         print("Shutting down...")
-        subprocess.call(['sudo', 'poweroff'])
+        subprocess.call(['sudo', 'shutdown', '-h', 'now'])
 
 # Function to gracefully stop rosbag recording
 def stop_rosbag():
     print("Stopping ROS bag recording...")
-    subprocess.call(['rosnode', 'kill', '/record'])
+    subprocess.call(['rosnode', 'kill', '/bag_record'])
 
 # Add event listener for both rising and falling edges (button press and 
 release)
