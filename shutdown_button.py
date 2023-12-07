@@ -1,4 +1,3 @@
-# shutdown_button.py
 import RPi.GPIO as GPIO
 import time
 import subprocess
