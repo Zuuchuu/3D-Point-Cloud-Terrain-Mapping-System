@@ -17,7 +17,7 @@ def button_callback(channel):
     global button_state
     button_state = GPIO.input(BUTTON_PIN)
 
-    if button_state == GPIO.LOW:
+    if button_state == GPIO.HIGH:
         print("Shutdown button pressed.")
     else:
         stop_rosbag()   # Stop ROS bag recording
@@ -30,8 +30,7 @@ def stop_rosbag():
     print("Stopping ROS bag recording...")
     subprocess.call(['rosnode', 'kill', '/bag_record'])
 
-# Add event listener for both rising and falling edges (button press and 
-release)
+# Add event listener for both rising and falling edges (button press and release)
 GPIO.add_event_detect(BUTTON_PIN, GPIO.BOTH, callback=button_callback, 
 bouncetime=200)
 
