@@ -20,9 +20,8 @@ def button_callback(channel):
     if button_state == GPIO.LOW:
         print("Shutdown button pressed.")
     else:
-        print("Shutdown button released. Waiting for 30 seconds...")
-        time.sleep(30)  # Wait for 30 seconds
         stop_rosbag()   # Stop ROS bag recording
+        time.sleep(30)  # Wait for 30 seconds
         print("Shutting down...")
         subprocess.call(['sudo', 'shutdown', '-h', 'now'])
 
