@@ -1,1 +1,13 @@
+<launch>
+    <!-- Launch Velodyne VLP-16 LiDAR -->
+    <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch"/>
 
+    <!-- Launch IMU BNO055 -->
+    <include file="$(find IMU-BNO055)/launch/imu.launch"/>
+
+    <!-- Launch NMEA Serial Driver -->
+    <include file="$(find NMEA-Driver)/launch/nmea_serial_driver.launch"/>
+
+    <!-- Start rosbag recording -->
+    <node name="bag_record" pkg="rosbag" type="record" output="screen" args="-a -o /home/ubuntu/DATA/Raw -b 2048"/>
+</launch>
