@@ -2,7 +2,7 @@
 
 In this 3D terrain mapping system, data collection from sensors during the UAV survey is done initially and further offline processing of the data is done to build a 3D map. The implementation of this research uses mainly Robotic Operating System (ROS) based on Raspberry Pi 4 running Ubuntu 18.04. Therefore, the software libraries used for the implementation are divided into two tasks: Data collection and Offline data processing.
 
-![My Image](image/BlockDiagram.png)
+![My Image](image/UAVDrone.jpg)
 
 Data Collection
 ---------------
