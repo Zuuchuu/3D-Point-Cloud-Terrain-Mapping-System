@@ -149,3 +149,9 @@ Run the mapping application:
 python3 georeference.py
 ```
 The result will be saved in LAS format and can be visualized on CloudCompare.
+
+Result
+----------------
+The below figure illustrates the LIDAR pointcloud generated from the mapping algorithm
+
+![My Image](image/FINAL.png)
